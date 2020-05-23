@@ -1,0 +1,25 @@
+Port: COM4
+Location: \\.\COM4
+Description: USB-SERIAL CH340
+Manufacturer: wch.cn
+Serial number: N/A
+Vendor Identifier: 1a86
+Product Identifier: 7523
+Busy: No
+
+Can't open file, try again please
+
+Connected to COM4 : 9600, 8, 0, 1, 0
+
+Traffic, transaction>: #1:
+>request:	A20.00
+
+>response:	A20.00
+
+
+Traffic, transaction>: #2:
+>request:	h
+>response:	h
+
+Disconected
+
