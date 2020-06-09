@@ -221,6 +221,7 @@ void MainWindow::on_btnSaveLog_clicked()
 {
     QDateTime::currentDateTime().toString();
     QLocale l(QLocale::English);
+    if(!QDir("./logs").exists()){QDir().mkdir("./logs");}
     QString name(tr("./logs/Log_%1.txt").arg(l.toString(QDateTime::currentDateTime(),"dd_MM_yyyy_hh_mm")));
     QFile log_file(name);
     if(!log_file.open(QIODevice::WriteOnly)){
@@ -240,4 +241,18 @@ void MainWindow::on_btnUpdateList_clicked()
     for (const QSerialPortInfo &info : infos)
         ui->boxPorts->addItem(info.portName());
     this->statusBar()->showMessage("Update COM ports list",1000);
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    QString str_data("A10.00\r");
+    QByteArray data = tr(qPrintable(str_data)).toLocal8Bit();
+    writeData(data);
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    QString str_data("A20.00\r");
+    QByteArray data = tr(qPrintable(str_data)).toLocal8Bit();
+    writeData(data);
 }

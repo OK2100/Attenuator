@@ -19,6 +19,7 @@
 #include <QScrollBar>
 #include <QTextStream>
 #include <QDateTime>
+#include <QDir>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -53,6 +54,10 @@ private slots:
     void on_btnSaveLog_clicked();
 
     void on_btnUpdateList_clicked();
+
+    void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
 
 private:
     void showStatusMessage(const QString &message);
